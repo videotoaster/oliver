@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Oliver Viewer</title>
+      <link rel="stylesheet" href="oliver.css" />
+      <link rel="preload" as="image" href="oliver1.png" />
+      <link rel="preload" as="image" href="oliver2.png" />
+      <link rel="preload" as="image" href="oliver3.png" />
+      <script>
+          var olive = 0;
+          var oil = [ "oliver1.png", "oliver2.png", "oliver3.png" ]
+          function oliverTwist() {
+              olive++;
+              if (olive > 2) olive = 0;
+              document.getElementById("oliver").src = oil[olive];
+          }
+          function killLoading() {
+              document.getElementById("oloader").style.display = "none";
+              document.getElementById("oliver").style.display = "block";
+          }
+      </script>
+   </head>
+   <body onload="killLoading()">
+       <p id="oloader">
+           Now loading<br>
+           <span style="font-size: large;"><b>Oliver Viewer</b></span>
+       </p>
+       <img id="oliver" onclick="oliverTwist()" alt="OLIVER" style="display:none;">
+   </body>
+</html>
