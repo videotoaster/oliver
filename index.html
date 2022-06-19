@@ -7,7 +7,7 @@
       <link rel="preload" as="image" href="oliver2.jpg" />
       <link rel="preload" as="image" href="oliver3.jpg" />
       <script>
-          var olive = 0;
+          var olive = -1;
           var oil = [ "oliver1.jpg", "oliver2.jpg", "oliver3.jpg" ]
           function oliverTwist() {
               olive++;
@@ -20,7 +20,7 @@
           }
       </script>
    </head>
-   <body onload="killLoading(); oliverTwist();">
+   <body onload="killLoading(); oliverTwist(); oliverTwist(); oliverTwist();">
        <p id="oloader">
            Now loading<br>
            <span style="font-size: large;"><b>Oliver Viewer</b></span>
